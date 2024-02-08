@@ -1,0 +1,35 @@
+{
+  "name": "@evoltdev/nextjs-server-recaptcha",
+  "version": "1.0.0",
+  "main": "dist/mailer.cjs.js",
+  "module": "dist/mailer.esm.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "dependencies": {
+    "luxon": "^3.4.4"
+  },
+  "devDependencies": {
+    "@evoltdev/eslint-config": "workspace:*",
+    "@evoltdev/typescript-config": "workspace:*",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-swc": "^0.3.0",
+    "@turbo/gen": "^1.11.3",
+    "@types/eslint": "^8.56.1",
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^20.10.6",
+    "@types/nodemailer": "^6.4.14",
+    "eslint": "^8.56.0",
+    "next": "^14",
+    "rollup": "^4.9.6"
+  },
+  "peerDependencies": {
+    "next": "^14"
+  },
+  "repository": "https://github.com/EvoltDev/nextjs-server-utils"
+}

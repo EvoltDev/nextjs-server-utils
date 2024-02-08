@@ -1,0 +1,9 @@
+{
+  "extends": "@evoltdev/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "moduleResolution": "Bundler"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
