@@ -6,6 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "publish": {
+      "dependsOn": ["build", "^publish"],
+      "inputs": ["dist/**"]
+    },
     "lint": {
       "dependsOn": ["^lint"]
     },
