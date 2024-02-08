@@ -1,8 +1,9 @@
 {
   "name": "@evoltdev/nextjs-server-recaptcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/mailer.cjs.js",
   "module": "dist/mailer.esm.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
