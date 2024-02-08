@@ -1,12 +1,13 @@
 {
   "name": "@evoltdev/nextjs-server-recaptcha",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/mailer.cjs.js",
   "module": "dist/mailer.esm.js",
   "type": "module",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "build": "rollup -c",
+    "generateTypes": "tsc --emitDeclarationOnly",
     "dev": "rollup -c -w",
     "publish": "pnpm publish"
   },

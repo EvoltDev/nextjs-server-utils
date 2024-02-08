@@ -6,8 +6,12 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "generateTypes": {
+      "dependsOn": ["^generateTypes"],
+      "outputs": ["dist/**"]
+    },
     "publish": {
-      "dependsOn": ["build", "^publish"],
+      "dependsOn": ["build", "generateTypes", "^publish"],
       "inputs": ["dist/**"]
     },
     "lint": {
