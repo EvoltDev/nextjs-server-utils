@@ -1,7 +1,4 @@
 import { z } from 'zod'
-import SESTransport from 'nodemailer/lib/ses-transport'
-import SMTPTransport from 'nodemailer/lib/smtp-transport'
-import nodemailer from 'nodemailer'
 
 export const emailConfigSchema = z
     .object({
@@ -31,29 +28,3 @@ export const emailConfigSchema = z
     )
 
 export type EmailConfig = z.infer<typeof emailConfigSchema>
-
-let config: SESTransport.Options | SMTPTransport.Options = {}
-
-export function configure(emailConfig: EmailConfig) {
-    switch (emailConfig.EMAIL_TRANSPORT) {
-        case 'SMTP':
-            config = {
-                host: emailConfig.SMTP_HOST,
-                port: emailConfig.SMTP_PORT,
-                secure: emailConfig.SMTP_SECURE,
-                auth: {
-                    user: emailConfig.SMTP_USER,
-                    pass: emailConfig.SMTP_PASS,
-                },
-            }
-            break
-        case 'SES':
-            const SES = require('@aws-sdk/client-ses').SES
-            const ses = new SES()
-            config = {
-                SES: ses,
-            }
-    }
-}
-
-export const transporter = nodemailer.createTransport(config)

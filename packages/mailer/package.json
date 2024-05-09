@@ -1,6 +1,6 @@
 {
   "name": "@evoltdev/nextjs-server-mailer",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "dist/mailer.cjs.js",
   "module": "dist/mailer.esm.js",
   "types": "dist/index.d.ts",
